@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Very Special</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: #fff0f5;
+            height: 100vh;
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0;
+            color: #333;
+        }
+        
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            background-color: white;
+            border: 3px dashed #ffb6c1;
+            border-radius: 15px;
+            overflow-y: auto;
+            max-height: 80vh;
+            padding: 30px;
+            margin: 20px 0;
+            opacity: 1;
+        }
+        
+        .sanrio-character {
+            position: absolute;
+            top: -40px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9245bf00-07aa-4192-8cb8-e43f812888b1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 0px rgba(255,182,193,0.4);
+        }
+        
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+            /* Removed opacity and transform */
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            text-align: right;
+            margin-top: 30px;
+            color: #ff6b6b;
+        }
+        
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ffb6c1;
+            padding: 10px 15px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 100;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+        }
+        
+        .music-control:hover {
+            background: #ff6b6b;
+            transform: scale(1.05);
+        }
+        
+        .music-control i {
+            margin-right: 8px;
+        }
+        
+        .cute-border {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/024b4304-7f5c-42b2-a948-0baaf56eb83f.png');
+            opacity: 0.15;
+            background-repeat: repeat;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cute-border"></div>
+    
+    <div class="container">
+        <div class="sanrio-character"></div>
+        <h1>To Someone Special</h1>
+        <div class="message" id="message1">Yo, harou! Time flies so fast, and today is Friday. Haloy na kitang dai nagkakaulay, I learned that phrase from a Bicolana friend. I've been studying how to code using HTML, and it's been a challenge since I'm a humanities student with zero knowledge about coding. Ngl, I've missed you, and I don't know why I totally agree with this. We've tried to work things out for almost four years, and I'm surprised I haven't flirted with anyone in almost a year. My last flirt was with you in January, and I never talked to anyone after that. I want to be upfront with you - I don't have feelings for you right now, but I want to try again because we might work this time. I'm rooting for us to see each other this year, despite our past and the hurt we've caused each other. If we don't work out this time, I'll never give us another chance. This is our last shot, and I'm serious about it.</div>
+        <div class="message" id="message2">As I'll be starting college soon, I don't want a chaotic life. I want to see that you've changed, not just for me but for yourself too. I want you to be honest with me all the time and not be shy about sharing your thoughts. Let's leave everything in the past and start fresh. Even if I have negative thoughts about you, I still trust you and your words. I'm only doing this with you because I want my end game to be you.</div>
+        <div class="message" id="message3">A guy tried to hook up with me yesterday, but I declined because we're talking, and I think you're my suitor too? I'm not sure, and I don't want to be delusional. Let's communicate openly, especially about negative thoughts. If you don't make an effort, don't expect me to keep chatting with you. I might disappear and never respond again, but I don't want that to happen. I'm trying to like you again, and I'm rooting for us to talk more. Our two-day conversation isn't enough, and if things don't change next month, I'm not sure what will happen, especially since we're far apart. Nevertheless, I'll do my best to make you feel like I'm deserving and worth it. That's all, and good luck with your academics. Remember, whether you're my end game or not, I'll always be proud of you.</div>
+        <div class="signature">With love, [Your Name]</div>
+    </div>
+    
+    <div class="music-control" id="musicControl">
+        <i>🎵</i>
+        <span>Play "Starry Eyes" by Cigarettes After Sex</span>
+    </div>
+
+    <iframe id="bgMusic" style="display:none" src="https://www.youtube.com/embed/F_6Emq5dyXQ?enablejsapi=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // YouTube Player API
+            let player;
+            const musicControl = document.getElementById('musicControl');
+            
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('bgMusic', {
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+            
+            function onPlayerReady(event) {
+                // Player is ready
+            }
+            
+            function onPlayerStateChange(event) {
+                // Update button text based on player state
+                if (event.data === YT.PlayerState.PLAYING) {
+                    musicControl.innerHTML = '<i>🎵</i><span>Pause "Starry Eyes"</span>';
+                } else {
+                    musicControl.innerHTML = '<i>🎵</i><span>Play "Starry Eyes"</span>';
+                }
+            }
+            
+            // Load YouTube API script
+            const tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            const firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            
+            // Handle control click
+            musicControl.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (!player) return;
+                
+                if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+                    player.pauseVideo();
+                } else {
+                    player.playVideo();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

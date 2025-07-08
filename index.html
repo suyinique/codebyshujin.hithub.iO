@@ -2,263 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Someone Very Special</title>
+    <title>また近いうちにお会いしましょうh</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: #fff0f5;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .container {
-            position: relative;
-            width: 90%;
-            max-width: 600px;
-            background-color: white;
-            border: 3px dashed #ffb6c1;
-            border-radius: 15px;
-            overflow: hidden;
-            padding: 30px;
-            transform: scale(0.9);
-            opacity: 0;
-            animation: appear 1s forwards 0.5s;
-        }
-
-        @keyframes appear {
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .sanrio-character {
-            position: absolute;
-            top: -40px;
-            right: 20px;
-            width: 120px;
-            height: 120px;
-            background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9245bf00-07aa-4192-8cb8-e43f812888b1.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        @keyframes heartbeat {
-            0% {
-                transform: rotate(45deg) scale(0.9);
-            }
-            25% {
-                transform: rotate(45deg) scale(1);
-            }
-            50% {
-                transform: rotate(45deg) scale(0.9);
-            }
-            75% {
-                transform: rotate(45deg) scale(1);
-            }
-            100% {
-                transform: rotate(45deg) scale(0.9);
-            }
-        }
-
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            color: #ff6b6b;
+            background-color: #f3f4f6; /* Light background */
+            color: #4b0082; /* Dark purple text */
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 0px rgba(255,182,193,0.4);
+            padding: 20px;
         }
-
+        h1 {
+            color: #6a0dad;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .container {
+            background-color: #ffffff; /* White background for the message container */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
         .message {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            text-align: left;
-            opacity: 0;
-            transform: translateY(20px);
+            background-color: #e6e6fa;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 12px 0;
+            font-size: 0.9em;
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            border: 2px dashed #ba8fff;
         }
-
-        .reveal {
-            animation: revealText 0.8s forwards;
-        }
-
-        @keyframes revealText {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .signature {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.8rem;
-            text-align: right;
-            margin-top: 30px;
-            color: #ff6b6b;
-            opacity: 0;
-            animation: fadeIn 1s forwards 2.5s;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .music-control {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #ffb6c1;
-            padding: 10px 15px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            z-index: 100;
-            color: white;
             font-weight: bold;
-            transition: all 0.3s ease;
+            margin-top: 20px;
+            font-size: 0.95em;
+            font-family: Arial, sans-serif;
+            color: #8a2be2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
-
-        .music-control:hover {
-            background: #ff6b6b;
-            transform: scale(1.05);
-        }
-
-        .music-control i {
-            margin-right: 8px;
-        }
-
-        .cute-border {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
-            background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/024b4304-7f5c-42b2-a948-0baaf56eb83f.png');
-            opacity: 0.15;
-            background-repeat: repeat;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .message {
-                font-size: 1rem;
-            }
+        audio {
+            margin-top: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="cute-border"></div>
+    <p>Starry Eyes By CAS</p>
+    <audio controls autoplay muted loop>
+        <source src="Starry Eyes - Cigarettes After Sex.mp3" type="audio/mpeg">
+        <source src="Starry Eyes - Cigarettes After Sex.wav" type="audio/wav">
+    </audio> 
 
     <div class="container">
-        <div class="sanrio-character"></div>
-        <h1>To Someone Special</h1>
-        <div class="message" id="message1">Yo, harou! Time flies so fast, and today is Friday. Haloy na kitang dai nagkakaulay, I learned that phrase from a Bicolana friend. I've been studying how to code using HTML, and it's been a challenge since I'm a humanities student with zero knowledge about coding. Ngl, I've missed you, and I don't know why I totally agree with this. We've tried to work things out for almost four years, and I'm surprised I haven't flirted with anyone in almost a year. My last flirt was with you in January, and I never talked to anyone after that. I want to be upfront with you - I don't have feelings for you right now, but I want to try again because we might work this time. I'm rooting for us to see each other this year, despite our past and the hurt we've caused each other. If we don't work out this time, I'll never give us another chance. This is our last shot, and I'm serious about it.</div>
-        <div class="message" id="message2">As I'll be starting college soon, I don't want a chaotic life. I want to see that you've changed, not just for me but for yourself too. I want you to be honest with me all the time and not be shy about sharing your thoughts. Let's leave everything in the past and start fresh. Even if I have negative thoughts about you, I still trust you and your words. I'm only doing this with you because I want my end game to be you.</div>
-        <div class="message" id="message3">A guy tried to hook up with me yesterday, but I declined because we're talking, and I think you're my suitor too? I'm not sure, and I don't want to be delusional. Let's communicate openly, especially about negative thoughts. If you don't make an effort, don't expect me to keep chatting with you. I might disappear and never respond again, but I don't want that to happen. I'm trying to like you again, and I'm rooting for us to talk more. Our two-day conversation isn't enough, and if things don't change next month, I'm not sure what will happen, especially since we're far apart. Nevertheless, I'll do my best to make you feel like I'm deserving and worth it. That's all, and good luck with your academics. Remember, whether you're my end game or not, I'll always be proud of you.</div>
-        <div class="signature">With love, [Your Name]</div>
+        <h1>konnichiwa, ate sharou :P</h1>
+        <div class="message" id="message1">yo, harou! time flies so fast, and today is friday. haloy na kitang dai nagkakaulay, I learned that phrase from a bicolana friend. ion know why I totally agree with this and i'm surprised I haven't flirted with anyone in almost a year. my last flirt was with you in January, and I never talked to anyone after that. I want to be upfront with you - ion have feelings for you rn, but I want to try again because we might work this time. gusto ko rin mag kita us this year, despite our past and the hurt we've caused each other. if we don't work out this time, I'll never give us another chance. this is our last shot, and I'm serious about it.</div>
+        <div class="message" id="message2">as I'll be starting college soon, I don't want a chaotic life. I want to see that you've changed, not just for me but for yourself 2. I want you to be honest with me and not be shy about sharing your thoughts. opkors, I will do that 2 sa'yo, para nmn fair lang. let's leave everything in the past and start fresh. even though I hold unfavorable views about you, I trust you and your words. I'm only doing this with you because I want my end game to be you. yes, oo, ikaw, to you, sa'yo.</div>
+        <div class="message" id="message3">a girl tried to hook up with me yesterday (she knew me because sa cof nmn here sa imus nina sam and ash), but I declined because we're talking, and I think you're my suitor too?? I'm not sure, and ion want to be delulu. let's communicate openly, especially about negative thoughts ha. if you don't make an effort, don't expect me to keep chatting with you. I might disappear and never respond again, but I do not want that to happen. I'm trying to like you again, and I'm rooting for us to talk more. if things don't change next month, I'm not sure what will happen, especially since we're far apart. nevertheless, I'll do my best to make you feel like I'm deserving and worth it. that's all, and good luck with your acads. remember, whether you're my end game or not, I'll always be proud of you.</div>
+        <div class="signature">from, master</div>
     </div>
-
-    <div class="music-control" id="musicControl">
-        <i>🎵</i>
-        <span>Play Background Music</span>
-    </div>
-
-    <audio loop id="bgMusic" src="your-music-file.mp3"></audio>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Reveal messages sequentially
-            setTimeout(() => {
-                document.getElementById('message1').classList.add('reveal');
-            }, 1000);
-
-            setTimeout(() => {
-                document.getElementById('message2').classList.add('reveal');
-            }, 2000);
-
-            setTimeout(() => {
-                document.getElementById('message3').classList.add('reveal');
-            }, 3000);
-
-            // Create floating hearts
-            createHearts();
-
-            // Music control
-            const musicControl = document.getElementById('musicControl');
-            const bgMusic = document.getElementById('bgMusic');
-            bgMusic.volume = 0.3; // Set lower volume by default
-
-            // Try to autoplay (may not work on all browsers)
-            bgMusic.play().catch(e => {
-                console.log("Autoplay prevented - user interaction required");
-            });
-
-            musicControl.addEventListener('click', function() {
-                if (bgMusic.paused) {
-                    bgMusic.play();
-                    musicControl.innerHTML = '<i>🎵</i><span>Pause Music</span>';
-                } else {
-                    bgMusic.pause();
-                    musicControl.innerHTML = '<i>🎵</i><span>Play Music</span>';
-                }
-            });
-        });
-
-        function createHearts() {
-            const container = document.getElementById('floatingHearts');
-            const heartCount = 20;
-
-            for (let i = 0; i < heartCount; i++) {
-                const heart = document.createElement('div');
-                heart.classList.add('floating-heart');
-                heart.innerHTML = '❤';
-                heart.style.left = Math.random() * 100 + 'vw';
-                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
-                heart.style.animationDelay = Math.random() * 5 + 's';
-                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
-                container.appendChild(heart);
-            }
-        }
-    </script>
 </body>
 </html>
